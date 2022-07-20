@@ -1,0 +1,518 @@
+12 : need to check
+---------------------------------------------------
+
+
+
+
+
+1. sum of 2 numbers:
+
+let x= 3;
+let y = 4;
+
+let z= x+y;
+console.log(z);
+---------------------------------------------------------------------
+2. print your name 100 times:
+
+for (let counter = 1; counter <= 100; counter = counter + 1) 
+{
+console.log(counter + 'my name is', 'badari');
+}
+
+---------------------------------------------------------------------
+
+3. average of 3 student marks and roll number:
+
+let studentrollnumber = prompt("enter your roll number");
+
+let maths = parseInt(prompt("maths marks"));
+let physics = parseInt(prompt("physics marks"));
+let chemistry = parseInt(prompt("chemistry marks"));
+
+var marks = (maths + physics + chemistry)/3;
+
+console.log("studentrollnumber:" + studentrollnumber);
+console.log("student percentage :" + marks);
+
+---------------------------------------------------------------------
+4. Print the biggest number in 3 given numbers:
+
+let num1 = parseInt(prompt("enter number 1"));
+let num2 = parseInt(prompt("enter number 2"));
+let num3 = parseInt(prompt("enter number 3"));
+
+if(num1 > num2 && num1 > num3){
+  console.log("num1 is the greatest number" + num1);
+}else if(num2 > num3 && num2 > num1){
+  console.log("num2 is the greatest number" + num2);
+}else{
+  console.log("num3 is the greatest number" + num3);
+}
+
+
+
+---------------------------------------------------------------------
+5. swaped numbers using 3rd variable temp:
+
+let num1 = prompt("enter number 1");
+let num2 = prompt("enter number 2");
+let temp = num2+num1;
+
+
+console.log("swaped numbers are" + temp);
+// if(num1 === num2){
+//   console.log("number are" + num1+num2);
+// }else{
+//   console.log("swaped number is" + num2+num1);
+// }
+
+
+
+---------------------------------------------------------------------
+6. print the odd numbers from 1 to 10:
+
+for (let x=1 ; x<=10; x++){
+  if(x%2 != 0){
+  console.log(x);    
+  }
+}
+
+---------------------------------------------------------------------
+
+7. print natural number from 1 to 10 in reverse:
+
+
+for (let x=10 ; x>=1; x--){
+  console.log(x);
+}
+
+
+---------------------------------------------------------------------
+
+(need clarification)
+
+
+8. write a program to accept a string in any case and 
+print it by another case:
+
+
+swapcase = function swapcase(str) {
+        return str.replace(/([a-z]+)|([A-Z]+)/g, 
+           function(match, chr) {
+        return chr ? match.toUpperCase() : match.toLowerCase();
+        });
+    }
+
+str = prompt("enter any value");
+console.log(swapcase(str));
+
+
+
+
+---------------------------------------------------------------------
+
+9. Find the perfext square or not:
+
+let num= parseInt(prompt("enter any value"));
+
+if(Math.sqrt(num) % 1 === 0){
+  console.log("it is perfect square" + num);
+}else{
+  console.log("it is not a perfect square" + num);
+}
+
+
+---------------------------------------------------------------------
+
+10. Print a table of any number:
+
+
+
+let num= parseInt(prompt("enter a number"));
+
+
+for(let i=1;i<=10;i++){
+  
+  let result = i * num;
+  
+  console.log(`${num} * ${i} = ${result}`);
+}
+
+
+
+---------------------------------------------------------------------
+
+11.To accept a string in uppercase and print it by lower case
+
+
+
+let string = prompt("enter your name");
+let string2 = string.toUpperCase();
+
+if(string === string2){
+ console.log(string.toLowerCase());
+}else{
+  console.log("you have entered not all in uppercase");
+}
+
+i/p: BAD
+
+o/p: bad
+
+
+---------------------------------------------------------------------
+
+12. accept single digit number and print in words
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------
+
+13. Program to reverse a number
+
+let number = parseInt(prompt("enter a number"));
+let lastdigit;
+let rev = 0;
+
+while(number != 0){
+  lastdigit = number % 10;
+  rev = rev * 10 + lastdigit;
+  number = Math.floor(number/10);  
+}
+
+console.log(rev);
+
+
+
+---------------------------------------------------------------------
+
+
+14. Find the largest number in the given list of number
+
+
+let arr = [3, 6, 2, 56, 32, 335, 189, 32, 100];
+let largest = arr[0];
+
+for (let i = 0; i < arr.length; i++) {
+    if (largest < arr[i] ) {
+        largest = arr[i];
+    }
+}
+console.log(largest);
+
+
+
+---------------------------------------------------------------------
+
+
+15. To caluclate and print the sum of even and odd 
+integers of the first n natural numbers
+
+
+let n = parseInt(prompt("enter a number"));
+
+
+function evenSum(n)
+{
+    return (n * (n + 1));
+}
+
+function oddsum(n){
+  let sum=0; 
+  let curr =1;
+  for(let i=0; i< n ; i++){
+    sum += curr;
+    curr += 2;
+  }
+  return sum;
+}
+
+console.log("Sum of first " + n + " Even numbers is: "  + evenSum(n));
+console.log("Sum of first " + n + " Odd numbers is: "  + oddsum(n));
+
+
+
+---------------------------------------------------------------------
+
+16. find the area of triangle when three sides are given
+
+
+let side1 = parseInt(prompt("enter area of side 1"));
+let side2 = parseInt(prompt("enter area of side 2"));
+let side3 = parseInt(prompt("enter area of side 3"));
+
+
+var s = (side1 + side2 + side3) / 2;
+var area = Math.sqrt(s * ((s - side1) * (s - side2) * (s - side3)));
+
+
+console.log("Area of Traingle is : "  + area);
+
+
+
+
+---------------------------------------------------------------------
+ 
+17. check the given number is prime or not
+
+
+let number = parseInt(prompt("enter a number"));
+let isPrime = true;
+
+if(number === 1){
+  console.log("Given number not a prime");
+}else if(number > 1){
+  for(let i=2;i<number;i++){
+    if(number % i == 0){
+      isPrime = false;
+      break;
+    }
+  }
+   if (isPrime) {
+        console.log(`${number} is a prime number`);
+    } else {
+        console.log(`${number} is a not prime number`);
+    }
+}else {
+    console.log("The number is not a prime number.");
+}
+
+
+
+---------------------------------------------------------------------
+ 
+
+18. find sum of series 1+2+3+..+n for any given n
+
+
+var n = parseInt(prompt("enter a number"));
+
+function sumOfSeries(n)
+{
+    return (n * (n + 1)) / 2;
+}
+ 
+console.log(sumOfSeries(n));
+
+
+
+
+
+---------------------------------------------------------------------
+
+19. find Sum of the series 1^2 + 2^2 + 3^2 + … + n^2 for any given n
+
+var n = parseInt(prompt("enter a number"));
+
+function sumOfSeries(n)
+{
+    return (n * (n + 1) *((2*n)+1)) / 6;
+}
+ 
+console.log(sumOfSeries(n));
+
+ 
+
+---------------------------------------------------------------------
+
+
+20. write a programm to print givrn series 1 2 4 8 16 32 64 128
+for any given n, n being count of numbers in series
+
+
+let n = parseInt(prompt("enter a number"));
+
+for(let i=1; i<=n; i=i*2){
+  console.log("sequence:" + i);
+}
+
+
+i/p: 5
+o/p: "sequence:1"
+"sequence:2"
+"sequence:4"
+
+ 
+
+---------------------------------------------------------------------
+ 
+
+21. write a programm to swap the numbers with out 
+using third variables
+
+
+let n1 = parseInt(prompt("enter a number 1"));
+let n2 = parseInt(prompt("enter a number 2"));
+
+if(n1 > n2){
+  console.log('swapped numbers:' + n1,n2);
+}else if(n1 == n2){
+  console.log('both numbers are same');
+}else{
+  console.log('swapped numbers are:' + n2,n1);
+}
+
+
+i/p: n1 =4 ; n2= 5
+o/p: swapped numbers: 5 4
+
+
+---------------------------------------------------------------------
+ 
+22. Write a programm to perform all arthematic caluclations
+(+,-,/,*,%,=)using switch cases
+
+
+let num1, num2, res, ch;
+
+ch = parseInt(prompt("enter Your choise"));
+
+
+if(ch > 0 && ch < 6){
+  num1 = parseInt(prompt("enter a number 1"));
+  num2 = parseInt(prompt("enter a number 2")); 
+}
+
+switch(ch){
+  case 1:
+    res = num1 + num2;
+    console.log("Addition is: " + res);
+    break;
+    
+  case 2:
+    res = num1 - num2;
+    console.log("subtraction is: " + res);
+    break;
+    
+  case 3:
+    res = num1/num2;
+    console.log("division is: " + res);
+    break;
+    
+  case 4:
+    res = num1*num2;
+    console.log("Multiplication is: " + res);
+    break;
+    
+  case 5:
+    res= num1%num2;
+    console.log("Modules is:" + res);
+    break;
+    
+  default:
+      console.log("Invalid Choice:" + ch)
+    
+}
+    
+    
+
+---------------------------------------------------------------------
+ 
+
+23. Write a programm to find the sum of individual 
+digit of a positive integer
+
+
+
+
+let number = parseInt(prompt("enter your name"));
+let sum =0;
+
+while(number){
+    remainder = number%10;
+  	sum = sum + remainder;
+	number = Math.floor(number/10);
+  }
+console.log("sum of all the numbers" , sum); 
+  
+
+i/p: 1234
+o/p: 10
+
+
+
+
+---------------------------------------------------------------------
+ 
+24. the number count of letters in a given text.
+
+
+let str = prompt("enter any word");
+let letter = prompt("select the word to check");
+
+function countletter(str,letter){
+  let countletter = 0;
+  
+  for(let position = 0; position< str.length ; position ++){
+    if(str.charAt(position) == letter){
+      countletter += 1; 
+    }
+    
+  }
+  return countletter;
+}
+
+console.log(countletter(str,letter));
+
+
+
+
+i/p: badari
+choose which letter to check :a
+
+o/p: 2
+
+
+---------------------------------------------------------------------
+ 
+25. Write a program to generate square root of 1 to 10
+
+const number = parseInt(prompt("enter the number"));
+
+for(let i=1; i<=number; i++){
+  const squareroot = Math.sqrt(i);
+  console.log(`The Square root of ${i} is ${squareroot}`);
+}
+
+
+i/p: 5
+
+o/p:
+
+"The Square root of 1 is 1"
+"The Square root of 2 is 1.4142135623730951"
+"The Square root of 3 is 1.7320508075688772"
+"The Square root of 4 is 2"
+"The Square root of 5 is 2.23606797749979"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------
